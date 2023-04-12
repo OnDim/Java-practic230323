@@ -1,6 +1,7 @@
 package lesson4;
 
 import java.io.*;
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
@@ -13,30 +14,30 @@ public class Main {
         ex1();
     }
 
-    private static void ex0() {
-        final int SIZE = 100_000;
-        Random random = new Random();
-
-        List<Random> linkedList = new LinkedList<>();
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < SIZE; i++) {
-            linkedList.add(null);
-        }
-        System.out.println("LinkedList: " + (System.currentTimeMillis() - start));
-
-        List<Random> arrayList = new ArrayList<>(SIZE);
-        start = System.currentTimeMillis();
-        for (int i = 0; i < SIZE; i++) {
-            arrayList.add( null);
-        }
-        System.out.println("ArrayList: " + (System.currentTimeMillis() - start));
-    }
+//    private static void ex0() {
+//        final int SIZE = 100_000;
+//        Random random = new Random();
+//
+//        List<Random> linkedList = new LinkedList<>();
+//        long start = System.currentTimeMillis();
+//        for (int i = 0; i < SIZE; i++) {
+//            linkedList.add(null);
+//        }
+//        System.out.println("LinkedList: " + (System.currentTimeMillis() - start));
+//
+//        List<Random> arrayList = new ArrayList<>(SIZE);
+//        start = System.currentTimeMillis();
+//        for (int i = 0; i < SIZE; i++) {
+//            arrayList.add( null);
+//        }
+//        System.out.println("ArrayList: " + (System.currentTimeMillis() - start));
+//    }
 
     private static void ex1() {
         Scanner in = new Scanner(System.in);
         LinkedList<String> wordsList = new LinkedList<>();
         Collections.addAll(wordsList, "apple", "orange", "banana", "tomato", "strawberry", "melon");
-
+        System.out.print(wordsList);
 
         while (true) {
             System.out.println();
